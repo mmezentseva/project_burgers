@@ -1,0 +1,26 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+  margin: 0px; }
+
+body {
+  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-style: light;
+  font-size: rem(18px);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: antialiased; }
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  margin: 0px; }
+
+ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px; }

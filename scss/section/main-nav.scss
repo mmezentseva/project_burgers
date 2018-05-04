@@ -1,0 +1,31 @@
+.main-nav {
+  display: flex;
+  position: fixed;
+  top: 90px;
+  right: 300px;
+}
+.main-nav__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main-nav__item {
+  padding-bottom: 10px;
+  align-self: center;
+}
+.main-nav__link {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: white;
+  text-decoration: none;
+}
+.main-nav__item--active {
+  display: inline-block;
+  position: relative;
+  border: 2px solid white;
+  background-color: transparent;
+  padding: 6px;
+  border-radius: 50%;
+}

@@ -1,0 +1,110 @@
+.section-top {
+  width: 100%;
+  height: 650px;
+  background: url("../img/bg/texture.png") center center no-repeat;
+}
+.header {
+  width: 100%; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+}
+.header__left {
+  margin-right: auto;
+}
+.header__right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+}
+.menu {
+  padding-left: 30px;
+}
+.menu-list__item {
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:after {
+  display: inline-block;
+  vertical-align: middle;
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: white;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 2px;
+  }
+  
+  &:last-child:after {
+  display: none;
+  }
+}
+.menu-list {
+  display: inline-block;
+  list-style: none;
+}
+.menu-link {
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  list-style: none;
+  color: white;
+  font-family: "Ubuntu";
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.order__button {
+  display: inline-block;
+  font-family: "Ubuntu";
+  font-size: 13px;
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  width: 100px;
+  height: 40px;
+  background: #e45028;
+  border: 1px solid #e45028;
+  border-radius: 5px;
+  padding: 13px 17px 13px 17px;
+  flex-basis: 10%;
+}
+.top-content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-bottom: 15%;
+}
+.top-content__image {
+  display: flex;
+  flex-basis: 50%;
+}
+.top-content__credo {
+  flex-basis: 50%;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+  padding-top: 70px;
+}
+.top-content__credo-first {
+  font-family: "gagalin";
+  font-size: 72px;
+  color: #f9b43b;
+}
+.top-content__credo-second {
+  font-family: "lifehack";
+  font-size: 65px;
+  color: white;
+  margin-top: -50px;
+}
+.next {
+  margin: auto;
+  padding-top: 80px;
+}
