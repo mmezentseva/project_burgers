@@ -1,0 +1,55 @@
+.menu-bar {
+  width: 100vw;
+  height: 100vh;
+  background: url("../img/bg/menu.png") center center no-repeat;	
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-size: cover;
+}
+.menu__title {
+  font-family: 'gagalin';
+  position: absolute;
+  left: 10%;
+  font-size: 72px;
+  color: white;
+  display: flex;
+  align-self: self-start;
+}
+.menu__list {   
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+}
+.menu__item {   
+  width: 10%;
+  height: 100vw;
+  overflow: hidden;
+  display: block;
+  cursor: pointer;
+  transition: 1.5s;
+  filter: grayscale(50%);
+  &:hover {
+    width: 100%;
+    transition: 0.3s;
+    filter: none;
+    .menu__type {
+      transform: rotate(0deg);
+    }
+  }
+}  
+.menu__picture {
+  width: 300px;
+  height: 100%;
+}
+.menu__picture-image {
+  height: 800px;
+}
+.menu__type {
+  font-family: 'gagalin';
+  position: absolute;
+  display: flex;
+  font-size: 40px;
+  color: white;
+  transform: rotate(-90deg);
+}

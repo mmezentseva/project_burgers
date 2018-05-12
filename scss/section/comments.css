@@ -1,42 +1,49 @@
 .comments {
   margin: 0 auto;
-  width: 1100px; }
+  width: 100vw;
+  height: 100vh; }
 
-.comments__people {
-  font-size: 0px; }
+.comments__list {
+  width: 1100px;
+  min-height: 650px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.comments__hover {
+  position: absolute;
+  top: 50;
+  right: 20;
+  left: 20;
+  bottom: 0;
+  opacity: 0;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  line-height: 1.42; }
 
 .comments__item {
-  display: inline-block; }
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 325px;
+  width: 275px; }
+  .comments__item:hover .comments__hover {
+    opacity: 1; }
 
 .comments__photo-image {
-  width: 275px;
-  height: 325px; }
-
-.comments__photo {
-  background: white;
-  display: inline-block;
-  position: relative; }
-
-.comments__photo-image {
-  opacity: 1;
-  -webkit-transition: opacity 0.5s linear;
-  -o-transition: opacity 0.5s linear;
-  transition: opacity 0.5s linear; }
-
-.comments__photo-image:hover {
-  opacity: 0.5; }
-
-.comments__hero {
   display: inline-block;
   position: relative;
-  background: white; }
-
-.comments__article {
-  display: inline-block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  color: white; }
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
+  .comments__photo-image:hover {
+    opacity: 0.5; }
 
 .comments__name {
   font-family: "gagalin";
@@ -49,16 +56,15 @@
   color: white; }
 
 .comments__button {
-  width: 110px;
-  height: 30px;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 10px 13px 10px 13px;
   background: #2f3234;
-  border: 1px solid #2f3234;
-  border-radius: 3px; }
+  border: 1px solid #2f3234; }
 
 .comments__more-info {
-  font-family: "Ubuntu";
   color: white;
   text-transform: uppercase;
-  font-size: rem(13px);
   text-decoration: none;
-  text-align: center; }
+  font-size: 13px;
+  font-weight: 500; }

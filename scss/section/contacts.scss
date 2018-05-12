@@ -1,0 +1,71 @@
+.contacts {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/bg/map.png") center center no-repeat;	
+  display: flex;
+  justify-content: center;
+  background-size: cover;
+  position: relative;
+}
+.container__contacts {
+  margin: 0 auto;
+  width: 940px; 
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer {
+  background: url("../img/bg/footer.png") center center no-repeat;	
+  position: absolute;
+  top: 93%;
+  height: 60px;
+  width: 100vw;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+}
+.contacts__contacts {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 65%;
+}
+.contacts__socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 50%;
+}
+.contacts__socials-item {
+  display: inline-block;
+  margin-left: 20px;
+  vertical-align: middle;
+}
+.contacts__contacts {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+  justify-content: space-between;
+}
+.contacts__phone {
+  display: inline-block;
+  color: #e45028;
+  font-size: 14px;
+  font-weight: 700;
+  flex-wrap: wrap;
+  text-decoration: none;
+}
+.contacts__phone:before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: url("../img/logos/phone.png") center center no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 2px;
+}
