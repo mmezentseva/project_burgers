@@ -11,45 +11,79 @@
   font-family: 'gagalin';
   position: absolute;
   left: 10%;
+  bottom: 46%;
   font-size: 72px;
   color: white;
   display: flex;
   align-self: self-start;
 }
-.menu__list {   
+.menu-accordion__list {   
   display: flex;
   justify-content: flex-end;
   padding: 0;
 }
-.menu__item {   
+.menu-accordion__elem {   
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   width: 10%;
-  height: 100vw;
+  height: 100%;
   overflow: hidden;
   display: block;
   cursor: pointer;
-  transition: 1.5s;
-  filter: grayscale(50%);
+  transition: 1s;
+
+  .menu-accordion__text {
+    display: none;
+  }
+
   &:hover {
     width: 100%;
     transition: 0.3s;
+    .menu__picture {
     filter: none;
-    .menu__type {
-      transform: rotate(0deg);
+    }
+
+    .menu-accordion__drop {
+      opacity: 1;
+    }
+  
+    .menu-accordion__text {
+      display: flex;
     }
   }
 }  
 .menu__picture {
   width: 300px;
   height: 100%;
+  filter: grayscale(50%);
 }
 .menu__picture-image {
-  height: 800px;
+  height: 100%;
 }
-.menu__type {
+.menu-accordion__link-text {
   font-family: 'gagalin';
   position: absolute;
   display: flex;
   font-size: 40px;
   color: white;
   transform: rotate(-90deg);
+  text-align: bottom;
+  bottom: 20%;
 }
+.menu-accordion__drop {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  left: 20%;
+  bottom: 0;
+  transition: .3s;
+  line-height: 2;
+} 
+.menu-accordion__text {
+  font-style: "Ubuntu";
+  font-size: 14px;
+  color: white;
+}
+

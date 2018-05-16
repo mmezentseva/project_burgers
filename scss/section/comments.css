@@ -1,11 +1,63 @@
 .comments {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background: gray; }
+
+.container-comments {
   margin: 0 auto;
   width: 100vw;
-  height: 100vh; }
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.comments__photo {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
+  .comments__photo:hover {
+    -webkit-filter: brightness(0.5);
+    filter: brightness(0.5); }
+
+.comments__photo--first {
+  background: url("../img/content/comments/first.jpg") no-repeat; }
+
+.comments__photo--second {
+  background: url("../img/content/comments/second.jpg") no-repeat; }
+
+.comments__photo--third {
+  background: url("../img/content/comments/third.jpg") no-repeat; }
+
+.comments__photo--forth {
+  background: url("../img/content/comments/forth.jpg") no-repeat; }
+
+.comments__photo--firth {
+  background: url("../img/content/comments/firth.jpg") no-repeat; }
+
+.comments__photo--sixth {
+  background: url("../img/content/comments/sixth.jpg") no-repeat; }
+
+.comments__photo--seventh {
+  background: url("../img/content/comments/seventh.jpg") no-repeat; }
+
+.comments__photo--eighth {
+  background: url("../img/content/comments/eighth.jpg") no-repeat; }
 
 .comments__list {
-  width: 1100px;
-  min-height: 650px;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14,13 +66,11 @@
 
 .comments__hover {
   position: absolute;
-  top: 50;
-  right: 20;
-  left: 20;
+  top: 10%;
+  right: 10%;
+  left: 10%;
   bottom: 0;
   opacity: 0;
-  -ms-flex-line-pack: center;
-  align-content: center;
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s;
@@ -31,19 +81,10 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  height: 325px;
-  width: 275px; }
+  height: 50%;
+  width: 25%; }
   .comments__item:hover .comments__hover {
     opacity: 1; }
-
-.comments__photo-image {
-  display: inline-block;
-  position: relative;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s; }
-  .comments__photo-image:hover {
-    opacity: 0.5; }
 
 .comments__name {
   font-family: "gagalin";
