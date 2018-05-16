@@ -1,12 +1,12 @@
 .comments {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-size: cover;
   background: gray; }
 
 .container-comments {
   margin: 0 auto;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22,42 +22,9 @@
   -ms-flex-direction: column;
   flex-direction: column; }
 
-.comments__photo {
-  width: 100%;
-  height: 100%;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s; }
-  .comments__photo:hover {
-    -webkit-filter: brightness(0.5);
-    filter: brightness(0.5); }
-
-.comments__photo--first {
-  background: url("../img/content/comments/first.jpg") no-repeat; }
-
-.comments__photo--second {
-  background: url("../img/content/comments/second.jpg") no-repeat; }
-
-.comments__photo--third {
-  background: url("../img/content/comments/third.jpg") no-repeat; }
-
-.comments__photo--forth {
-  background: url("../img/content/comments/forth.jpg") no-repeat; }
-
-.comments__photo--firth {
-  background: url("../img/content/comments/firth.jpg") no-repeat; }
-
-.comments__photo--sixth {
-  background: url("../img/content/comments/sixth.jpg") no-repeat; }
-
-.comments__photo--seventh {
-  background: url("../img/content/comments/seventh.jpg") no-repeat; }
-
-.comments__photo--eighth {
-  background: url("../img/content/comments/eighth.jpg") no-repeat; }
-
 .comments__list {
   height: 100vh;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -109,3 +76,16 @@
   text-decoration: none;
   font-size: 13px;
   font-weight: 500; }
+
+.comments__photo {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
+  .comments__photo:hover {
+    -webkit-filter: brightness(0.5);
+    filter: brightness(0.5); }
