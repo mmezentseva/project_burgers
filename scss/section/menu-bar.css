@@ -1,0 +1,100 @@
+.menu-bar {
+  width: 100vw;
+  height: 100vh;
+  background: url("../img/bg/menu.png") center center no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-size: cover; }
+
+.menu__title {
+  font-family: 'gagalin';
+  position: absolute;
+  left: 10%;
+  bottom: 46%;
+  font-size: 72px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: self-start;
+  align-self: self-start; }
+
+.menu-accordion__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding: 0; }
+
+.menu-accordion__elem {
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 10%;
+  height: 100%;
+  overflow: hidden;
+  display: block;
+  cursor: pointer;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s; }
+  .menu-accordion__elem .menu-accordion__text {
+    display: none; }
+  .menu-accordion__elem:hover {
+    width: 100%;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+    .menu-accordion__elem:hover .menu__picture {
+      -webkit-filter: none;
+      filter: none; }
+    .menu-accordion__elem:hover .menu-accordion__drop {
+      opacity: 1; }
+    .menu-accordion__elem:hover .menu-accordion__text {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+
+.menu__picture {
+  height: 100%; }
+
+.menu__picture-image {
+  height: 100%; }
+
+.menu-accordion__link-text {
+  font-family: 'gagalin';
+  display: inline-block;
+  font-size: 40px;
+  color: white;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  text-align: center; }
+
+.menu-accordion__drop {
+  position: absolute;
+  width: 80%;
+  top: 10%;
+  right: 10%;
+  left: 20%;
+  bottom: 0;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  line-height: 2; }
+
+.menu-accordion__text {
+  font-style: "Ubuntu";
+  font-size: 14px;
+  color: white; }

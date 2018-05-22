@@ -39,7 +39,8 @@
 }
 .contacts__socials-item {
   display: inline-block;
-  margin-left: 20px;
+  margin-left: 15px;
+  margin-bottom: 3px;
   vertical-align: middle;
 }
 .contacts__contacts {
@@ -51,6 +52,22 @@
   font-size: 14px;
   text-decoration: none;
   justify-content: space-between;
+}
+.contacts__socials-link {
+  display: inline-block;
+  vertical-align: middle;
+}
+.contacts__socials-link--vk:hover {
+  background: url("../img/logos/vk-h.png") center center no-repeat;	
+}
+.contacts__socials-link--fb:hover {
+  background: url("../img/logos/fb-h.png") center center no-repeat;
+}
+.contacts__socials-link--inst:hover {
+  background: url("../img/logos/inst-h.png") center center no-repeat;
+}
+.contacts__socials-link--tw:hover {
+  background: url("../img/logos/twitter-h.png") center center no-repeat;
 }
 .contacts__phone {
   display: inline-block;

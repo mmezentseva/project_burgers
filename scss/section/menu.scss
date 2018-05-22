@@ -1,89 +1,63 @@
-.menu-bar {
-  width: 100vw;
-  height: 100vh;
-  background: url("../img/bg/menu.png") center center no-repeat;	
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-size: cover;
-}
-.menu__title {
-  font-family: 'gagalin';
-  position: absolute;
-  left: 10%;
-  bottom: 46%;
-  font-size: 72px;
-  color: white;
-  display: flex;
-  align-self: self-start;
-}
-.menu-accordion__list {   
-  display: flex;
-  justify-content: flex-end;
-  padding: 0;
-}
-.menu-accordion__elem {   
+.menu {
+  background: url("../img/bg/menu.jpg") center center no-repeat;
   position: relative;
   background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.menu__title {
+  font-family: "gagalin";
+  font-size: 72px;
+  color: white;
+  position: absolute;
+  top: 10%;
+  left: 10%; }
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding: 0; }
+
+.menu__item {
   width: 10%;
   height: 100%;
   overflow: hidden;
   display: block;
-  cursor: pointer;
-  transition: 1s;
-
-  .menu-accordion__text {
-    display: none;
-  }
-
-  &:hover {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%); }
+  .menu__item:hover {
     width: 100%;
-    transition: 0.3s;
-    .menu__picture {
-    filter: none;
-    }
+    height: 100%;
+    -webkit-transition: 1.5s;
+    -o-transition: 1.5s;
+    transition: 1.5s;
+    -webkit-filter: none;
+    filter: none; }
 
-    .menu-accordion__drop {
-      opacity: 1;
-    }
-  
-    .menu-accordion__text {
-      display: flex;
-    }
-  }
-}  
 .menu__picture {
-  width: 300px;
-  height: 100%;
-  filter: grayscale(50%);
-}
+  width: 100vw;
+  height: 100vh; }
+
 .menu__picture-image {
-  height: 100%;
-}
-.menu-accordion__link-text {
-  font-family: 'gagalin';
-  position: absolute;
-  display: flex;
+  width: 100vw;
+  height: 100vh; }
+
+.menu__type {
+  font-family: "gagalin";
   font-size: 40px;
   color: white;
-  transform: rotate(-90deg);
-  text-align: bottom;
-  bottom: 20%;
-}
-.menu-accordion__drop {
-  position: absolute;
-  top: 10%;
-  right: 10%;
-  left: 20%;
-  bottom: 0;
-  transition: .3s;
-  line-height: 2;
-} 
-.menu-accordion__text {
-  font-style: "Ubuntu";
-  font-size: 14px;
-  color: white;
-}
-
+  text-decoration: none;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg); }
