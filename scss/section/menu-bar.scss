@@ -39,6 +39,8 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  position: relative;
+  flex: 1 0 80px;
 }
 .menu-accordion__drop {
   display: flex;
@@ -49,6 +51,7 @@
   padding: 10% 5%;
   transition: .3s;
   line-height: 2;
+  overflow: hidden;
 
   &:hover {
     opacity: 1;
@@ -88,7 +91,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 400%;
+  white-space: nowrap;
+  position: absolute;
+  bottom: 45px;
 }
 .menu-accordion__text {
   font-style: "Ubuntu";

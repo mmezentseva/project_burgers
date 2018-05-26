@@ -93,13 +93,14 @@
 .top-content__image {
   display: flex;
   flex-basis: 50%;
+  margin-top: 2%;
 }
 .top-content__credo {
   flex-basis: 50%;
   flex-direction: column;
   justify-content: center;
-  padding-left: 20px;
-  padding-top: 70px;
+  padding-top: 10%;
+  margin-left: -11px;
 }
 .top-content__credo-first {
   font-family: "gagalin";
@@ -114,5 +115,5 @@
 }
 .next {
   margin: auto;
-  padding-top: 20%;
+  padding-top: 18%;
 }

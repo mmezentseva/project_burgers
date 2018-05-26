@@ -16,7 +16,8 @@
   color: #f9b43b;
   font-size: 72px;
   text-align: center;
-  margin-bottom: 10%;
+  margin-bottom: 8%;
+  margin-top: -8%;
 }
 .form__left {
   display: flex;
@@ -25,6 +26,13 @@
 }
 .form__title {
   margin-bottom: 5px;
+  font-size: 14px;
+}
+.form__radio-title {
+  font-size: 14px;
+}
+.form__checkbox-title {
+  font-size: 14px;
 }
 .form__input {
   border: none;
@@ -57,18 +65,21 @@
   text-transform: uppercase;
   text-decoration: none;
   width: 100px;
-  height: 40px;
+  height: 35px;
   background: #e45028;
   border: 1px solid #e45028;
   border-radius: 5px;
-  padding: 13px 17px 13px 17px;
+  padding: 9px 15px;
   flex-basis: 10%;
+  margin-top: 12%;
 }
 .order__clear {
   text-decoration: none;
   color: white;
-  margin-left: 10%;
+  margin-left: 4%;
+  margin-top: 3%;
   display: flex;
+  font-size: 14px;
   align-items: center;
 }
 .form__comments {
@@ -79,7 +90,7 @@
   overflow: auto;
 }
 .form__radio {
-  margin-right: 10px;
+  margin-right: 22px;
 }
 .form__radio-input {
   display: none;
@@ -107,6 +118,9 @@
 	left: 4px;
 	background: #e35028;
 	border-radius: 50%;
+}
+.form__checkbox {
+  margin-top: 2%;
 }
 .form__checkbox-input {
   display: none;

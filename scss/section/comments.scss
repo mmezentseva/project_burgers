@@ -21,7 +21,7 @@
 }
 .comments__hover {
   position: absolute;
-  top: 10%;
+  top: 15%;
   right: 10%;
   left: 10%;
   bottom: 0;
@@ -47,11 +47,13 @@
   font-family: "gagalin";
   font-size: 14px;
   color: white;
+  padding-bottom: 10px;
 }
 .comments__text {
   font-style: "Ubuntu";
   font-size: 14px;
   color: white;
+  padding-bottom: 7px;
 }
 .comments__button {
   display: inline-block;

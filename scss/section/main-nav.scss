@@ -1,8 +1,8 @@
 .main-nav {
   display: flex;
   position: fixed;
-  top: 170px;
-  right: 300px;
+  top: 84px;
+  right: 281px;
 }
 .main-nav__list {
   display: flex;
@@ -10,7 +10,7 @@
   justify-content: center;
 }
 .main-nav__item {
-  padding-bottom: 10px;
+  padding-bottom: 5%;
   align-self: center;
 }
 .main-nav__link {
@@ -26,6 +26,6 @@
   position: relative;
   border: 2px solid white;
   background-color: transparent;
-  padding: 6px;
+  padding: 5px;
   border-radius: 50%;
 }
