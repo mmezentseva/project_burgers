@@ -39,6 +39,7 @@
   border-radius: 5px;
   padding: 5px 20px;
   width: 100%;
+  outline: none;
 }
 .form__row {
   display: flex;
@@ -88,6 +89,7 @@
 	border-radius: 5px;
   resize: none;
   overflow: auto;
+  outline: none;
 }
 .form__radio {
   margin-right: 22px;
