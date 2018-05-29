@@ -1,8 +1,12 @@
 .main-nav {
   display: flex;
   position: fixed;
-  top: 90px;
-  right: 100px;
+  top: rem(90px);
+  right: rem(100px);
+
+  @include tablets {
+    display: none;
+  }
 }
 .main-nav__list {
   display: flex;
@@ -15,8 +19,8 @@
 }
 .main-nav__link {
   display: inline-block;
-  width: 6px;
-  height: 6px;
+  width: rem(6px);
+  height: rem(6px);
   border-radius: 50%;
   background: white;
   text-decoration: none;
@@ -24,8 +28,8 @@
 .main-nav__item--active {
   display: inline-block;
   position: relative;
-  border: 2px solid white;
+  border: rem(2px) solid white;
   background-color: transparent;
-  padding: 5px;
+  padding: rem(5px);
   border-radius: 50%;
 }

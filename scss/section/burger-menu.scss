@@ -10,7 +10,7 @@
 }
 .burger__container {
   margin: 0 auto;
-  width: 1000px; 
+  width: rem(1000px); 
   height: 100%;
   display: flex;
   justify-content: center;
@@ -32,13 +32,13 @@
 }
 .burgers-menu__title {
   font-family: "gagalin";
-  font-size: 72px;
+  font-size: rem(72px);
   line-height: 1;
   color: white;
   padding-bottom: 8%;
 }
 .burgers-menu__text {
-  font-size: 14px;
+  font-size: rem(14px);
   line-height: 1.5;
   color: white;
 }
@@ -48,12 +48,12 @@
 }
 .burgers-menu__price-number {
   font-family: "gagalin";
-  font-size: 72px;
+  font-size: rem(72px);
   color: #e35028;
 }
 .burgers-menu__price-rub {
   font-family: "gagalin";
-  font-size: 30px;
+  font-size: rem(30px);
   color: #e35028;
 }
 .burgers-menu__button {
@@ -64,17 +64,17 @@
 .burgers-menu__button-order {
   display: inline-block;
   font-family: "Ubuntu";
-  font-size: 13px;
+  font-size: rem(13px);
   color: white;
   font-weight: 500;
   text-transform: uppercase;
   text-decoration: none;
-  width: 100px;
-  height: 40px;
+  width: rem(100px);
+  height: rem(40px);
   background: #e45028;
   border: 1px solid #e45028;
-  border-radius: 5px;
-  padding: 13px 17px 13px 17px;
+  border-radius: rem(5px);
+  padding: rem(13px 17px 13px 17px);
 }
 .burgers-menu__right-arrow {
   margin-right: -7%;
@@ -97,7 +97,7 @@
 .burgers-menu__left-arrow {
   margin: auto;
   margin-right: -3%;
-  padding-bottom: 10px;
+  padding-bottom: rem(10px);
 }
 .burgers-menu__calories {
   display: flex;
@@ -115,25 +115,25 @@
   justify-content: center;
   align-items: center;
   background: url("../img/logos/kkal.png") center center no-repeat;	
-  width: 70px;
-  height: 70px;
+  width: rem(70px);
+  height: rem(70px);
 }
 .burgers-menu__number {
   font-family: "gagalin";
-  font-size: 20px;
+  font-size: rem(20px);
   font-weight: 400;
   color: white;
   padding: 30% 0 0 3%;
 }
 .burgers-menu__kkal {
   font-family: "gagalin";
-  font-size: 14px;
+  font-size: rem(14px);
   font-weight: 400;
   color: white;
 }
 .burgers-menu__link {
   font-family: "gagalin";
-  font-size: 14px;
+  font-size: rem(14px);
   font-weight: 400;
   color: white;
   text-decoration: none;
@@ -143,9 +143,9 @@
   align-items: center;
   background: rgba(#e35028, .40);
   border: none;
-  border-radius: 5px;
-  padding: 13px 20px 13px 20px;
+  border-radius: rem(5px);
+  padding: rem(13px 20px 13px 20px);
 }
 .burgers-menu__ingr {
-  margin-top: 5px;
+  margin-top: rem(5px);
 }

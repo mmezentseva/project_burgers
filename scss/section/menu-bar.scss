@@ -12,7 +12,7 @@
   position: absolute;
   left: 10%;
   bottom: 46%;
-  font-size: 72px;
+  font-size: rem(72px);
   color: white;
   display: flex;
   align-self: self-start;
@@ -40,7 +40,7 @@
   background-position: center center;
   background-repeat: no-repeat;
   position: relative;
-  flex: 1 0 80px;
+  flex: rem(1 0 80px);
 }
 .menu-accordion__drop {
   display: flex;
@@ -59,7 +59,7 @@
 }
 .menu-accordion__elem {   
   display: flex;
-  width: 80px;
+  width: rem(80px);
   height: 100%;
   overflow: hidden;
   cursor: pointer;
@@ -85,7 +85,7 @@
 .menu-accordion__link-text {
   width: 100%;
   font-family: 'gagalin';
-  font-size: 40px;
+  font-size: rem(40px);
   color: white;
   transform: rotate(-90deg);
   display: flex;
@@ -93,11 +93,11 @@
   justify-content: center;
   white-space: nowrap;
   position: absolute;
-  bottom: 45px;
+  bottom: rem(45px);
 }
 .menu-accordion__text {
   font-style: "Ubuntu";
-  font-size: 14px;
+  font-size: rem(14px);
   color: white;
 }
 

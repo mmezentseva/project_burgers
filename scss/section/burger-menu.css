@@ -1,17 +1,205 @@
 .burgers-menu {
-  background: url("../img/bg/menu.jpg") center center no-repeat;
+  background: url("../img/bg/burgers-list.jpg") center center no-repeat;
   position: relative;
   background-size: cover;
   margin: 0 auto;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
+
+.burger__container {
+  margin: 0 auto;
+  width: rem(1000px);
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.burgers-menu__right {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.burgers-menu__right-content {
+  width: 80%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-left: 8%;
+  margin-top: -5%; }
+
+.burgers-menu__right-arrow {
+  margin: auto; }
+
+.burgers-menu__title {
+  font-family: "gagalin";
+  font-size: rem(72px);
+  line-height: 1;
+  color: white;
+  padding-bottom: 8%; }
+
+.burgers-menu__text {
+  font-size: rem(14px);
+  line-height: 1.5;
+  color: white; }
+
+.burgers-menu__price {
+  display: inline-block;
+  vertical-align: bottom; }
+
+.burgers-menu__price-number {
+  font-family: "gagalin";
+  font-size: rem(72px);
+  color: #e35028; }
+
+.burgers-menu__price-rub {
+  font-family: "gagalin";
+  font-size: rem(30px);
+  color: #e35028; }
+
+.burgers-menu__button {
+  display: inline-block;
+  vertical-align: bottom;
+  padding-left: 4%; }
+
+.burgers-menu__button-order {
+  display: inline-block;
+  font-family: "Ubuntu";
+  font-size: rem(13px);
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  width: rem(100px);
+  height: rem(40px);
+  background: #e45028;
+  border: 1px solid #e45028;
+  border-radius: rem(5px);
+  padding: rem(13px 17px 13px 17px); }
+
+.burgers-menu__right-arrow {
+  margin-right: -7%; }
+
+.burgers-menu__left {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.burgers-menu__left-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  width: 90%;
+  margin-right: 5%; }
+
+.burgers-menu__structure {
+  margin-left: 8%; }
+
+.burgers-menu__left-arrow {
+  margin: auto;
+  margin-right: -3%;
+  padding-bottom: rem(10px); }
+
+.burgers-menu__calories {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 6%; }
+
+.burgers-menu__picture {
+  margin-top: 1%; }
+
+.burgers-menu__calories-picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: url("../img/logos/kkal.png") center center no-repeat;
+  width: rem(70px);
+  height: rem(70px); }
+
+.burgers-menu__number {
+  font-family: "gagalin";
+  font-size: rem(20px);
+  font-weight: 400;
+  color: white;
+  padding: 30% 0 0 3%; }
+
+.burgers-menu__kkal {
+  font-family: "gagalin";
+  font-size: rem(14px);
+  font-weight: 400;
+  color: white; }
+
+.burgers-menu__link {
+  font-family: "gagalin";
+  font-size: rem(14px);
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: rgba(227, 80, 40, 0.4);
+  border: none;
+  border-radius: rem(5px);
+  padding: rem(13px 20px 13px 20px); }
+
+.burgers-menu__ingr {
+  margin-top: rem(5px); }
