@@ -10,6 +10,12 @@
 .order__maincontent {
   display: flex;
   justify-content: center;
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+  }
 }
 .order__title {
   font-family: "gagalin";
@@ -18,11 +24,26 @@
   text-align: center;
   margin-bottom: 8%;
   margin-top: -8%;
+
+  @include tablets {
+    margin-top: 5%;
+    margin-bottom: 7%;
+    width: 90%;
+  }
 }
 .form__left {
   display: flex;
   width: 50%;
   text-align: left;
+
+  @include phones {
+    width: 90%;
+    margin-top: -5%;
+
+    .form__block:last-child {
+      display: none;
+    }
+  }
 }
 .form__title {
   margin-bottom: rem(5px);
@@ -37,7 +58,7 @@
 .form__input {
   border: none;
   border-radius: rem(5px);
-  padding: rem(5px 20px);
+  padding: rem(5px) rem(20px);
   width: 100%;
   outline: none;
 }
@@ -45,8 +66,9 @@
   display: flex;
   margin-bottom: rem(10px);
 
-  @include tablets {
-    flex-direction: column;
+  @include phones {
+    align-items: center;
+    justify-content: center;
   }
 }
 .form__block {
@@ -60,6 +82,15 @@
 .form__right {
   width: 50%;
   margin-left: rem(20px);
+
+  @include tablets {
+    margin-top: -2%;
+    margin-left: 0;
+  }
+  @include phones {
+    width: 90%;
+    margin-bottom: -1%;
+  }
 }
 .form___order-button {
   display: flex;
@@ -74,7 +105,7 @@
   background: #e45028;
   border: rem(1px) solid #e45028;
   border-radius: rem(5px);
-  padding: rem(9px 15px);
+  padding: rem(9px) rem(15px);
   flex-basis: 10%;
   margin-top: 12%;
 }
@@ -94,6 +125,13 @@
   resize: none;
   overflow: auto;
   outline: none;
+
+  @include tablets {
+    width: 100%;
+  }
+  @include phones {
+    width: 96%;
+  }
 }
 .form__radio {
   margin-right: rem(22px);
@@ -107,7 +145,7 @@
 	background: white;
 	border-radius: 50%;
   position: relative;
-  margin-right:rem(5px);
+  margin-right: rem(5px);
 }
 .form__input-demo, .form__radio-title {
 	display: inline-block;

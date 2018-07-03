@@ -1,3 +1,15 @@
+$tablets: 768px;
+@mixin tablets {
+  @media screen and (max-width: $tablets) {
+    @content;
+  }
+}
+$phones: 480px;
+@mixin phones {
+  @media screen and (max-width: $phones) {
+    @content;
+  }
+}
 .team {
   background: url("../img/bg/team.jpg") center center no-repeat;	
   position: relative;
@@ -15,13 +27,18 @@
   top: 0;	   
   right: 0;	
   bottom: 0;	  
-  width: 50%;	  
+  left: 50%;	  
   background: rgba(#2f3234, .93);
   padding: 5% 2% 0 5%;
   display: flex;	  
   align-items: center;	
   flex-direction: column;
   justify-content: center;
+
+  @include tablets {
+    left: 0;
+    text-align: center;
+  }
 }
 .team__title {
   font-family: 'gagalin';
@@ -32,6 +49,13 @@
   margin-left: 7%;
   display: flex;
   align-self: self-start;
+
+  @include tablets {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 3%;
+  }
 }
 .acco {
   display: flex;
@@ -39,9 +63,24 @@
   justify-content: center;
   align-self: self-start;
   margin-left: 7%;
+
+  @include tablets {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-top: 0;
+  }
 }
 .acco__item {
   padding-bottom: 2%;
+
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 2%;
+  }
 }
 .acco__trigger {
   display: flex;
@@ -69,6 +108,14 @@
   margin-left: rem(20px);
   width: 70%;
   margin-top: 4%;
+
+  @include tablets {
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    margin-top: 4%;
+  }
 }
 .acco__description-title {
   font-size: rem(14px);
@@ -79,11 +126,26 @@
   font-size: rem(14px);
   font-weight: 300;
   line-height: 1.7;
+
+  @include tablets {
+    text-align: center;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    margin-top: 4%;
+    margin-bottom: 2%;
+  }
 }
 .acco__content {
   display: flex;
   height: 0;
   overflow: hidden;
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .acco__item--active {
   .acco__trigger {
@@ -96,12 +158,15 @@
     height: auto;
   }
 }
-.acco__picture {
+.acco__picture-image {
   display: inline-block;
   width: rem(100px);
   height: rem(100px);
   border-radius: 50%;
   overflow: hidden;
   align-self: center;
-  margin-left: 3%;
+
+  @include tablets {
+    margin-top: 10%;
+  }
 }

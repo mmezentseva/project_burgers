@@ -1,3 +1,15 @@
+$tablets: 768px;
+@mixin tablets {
+  @media screen and (max-width: $tablets) {
+    @content;
+  }
+}
+$phones: 480px;
+@mixin phones {
+  @media screen and (max-width: $phones) {
+    @content;
+  }
+}
 .comments {
   width: 100%; 
   height: 100vh;
@@ -28,10 +40,6 @@
   opacity: 0;
   transition: .3s;
   line-height: 1.42;
-
-  @include tablets {
-    padding-top: 6%;
-  }
 }
 .comments__item {
   position: relative;
@@ -41,15 +49,15 @@
   height: 50%;
   width: 25%;
 
-  @include tablets {
-    width: 50%;
-    height: 25%;
-  }
-
   &:hover {
     .comments__hover {
       opacity: 1;
     }
+  }
+
+  @include tablets {
+    width: 50%;
+    height: 25%;
   }
 }
 .comments__name {
@@ -57,19 +65,48 @@
   font-size: rem(14px);
   color: white;
   padding-bottom: rem(10px);
+
+  @include tablets {
+    padding-bottom: 0;
+    margin-top: -3%;
+    text-align: center;
+  }
+  @include phones {
+    font-size: rem(24px);
+    margin-top: 2%;
+  }
 }
 .comments__text {
   font-style: "Ubuntu";
   font-size: rem(14px);
   color: white;
   padding-bottom: rem(7px);
+
+  @include tablets {
+    padding-bottom: 0;
+    margin-top: 2%;
+    text-align: center;
+  }
+  @include phones {
+    display: none;
+  }
 }
 .comments__button {
   display: inline-block;
   border-radius: rem(5px);
-  padding: rem(10px 13px 10px 13px);
+  padding: rem(10px) rem(13px);
   background: #2f3234;
   border: rem(1px) solid #2f3234;
+
+  @include tablets {
+  display: flex;
+  width: 40%;
+  justify-content: center;
+  margin: auto;
+  }
+  @include phones {
+    display: none;
+  }
 }
 .comments__more-info {
   color: white;
@@ -78,9 +115,33 @@
   font-size: rem(13px);
   font-weight: 500;
 }
+.comments__btn-phone {
+  display: none;
+
+  @include phones {
+    display: flex;
+    border-radius: rem(5px);
+    padding: rem(10px) rem(13px);
+    background: #2f3234;
+    border: rem(1px) solid #2f3234;
+    justify-content: center;
+    width: 70%;
+    margin: auto;
+    margin-top: 7%;
+
+    .comments__review {
+      color: white;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-size: rem(13px);
+      font-weight: 700;
+    }
+  }
+}
 .comments__photo {
   width: 100%; 
   height: 100%;
+  max-width: 100%;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;

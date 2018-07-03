@@ -1,10 +1,10 @@
 .main-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   position: fixed;
-  top: 90px;
-  right: 300px; }
+  top: rem(90px);
+  right: rem(100px); }
+  @media screen and (max-width: 768px) {
+    .main-nav {
+      display: none; } }
 
 .main-nav__list {
   display: -webkit-box;
@@ -19,14 +19,14 @@
   justify-content: center; }
 
 .main-nav__item {
-  padding-bottom: 10px;
+  padding-bottom: 5%;
   -ms-flex-item-align: center;
   align-self: center; }
 
 .main-nav__link {
   display: inline-block;
-  width: 6px;
-  height: 6px;
+  width: rem(6px);
+  height: rem(6px);
   border-radius: 50%;
   background: white;
   text-decoration: none; }
@@ -34,7 +34,7 @@
 .main-nav__item--active {
   display: inline-block;
   position: relative;
-  border: 2px solid white;
+  border: rem(2px) solid white;
   background-color: transparent;
-  padding: 6px;
+  padding: rem(5px);
   border-radius: 50%; }

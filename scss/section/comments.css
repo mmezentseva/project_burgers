@@ -33,7 +33,7 @@
 
 .comments__hover {
   position: absolute;
-  top: 10%;
+  top: 15%;
   right: 10%;
   left: 10%;
   bottom: 0;
@@ -55,26 +55,28 @@
 
 .comments__name {
   font-family: "gagalin";
-  font-size: 14px;
-  color: white; }
+  font-size: rem(14px);
+  color: white;
+  padding-bottom: rem(10px); }
 
 .comments__text {
   font-style: "Ubuntu";
-  font-size: 14px;
-  color: white; }
+  font-size: rem(14px);
+  color: white;
+  padding-bottom: rem(7px); }
 
 .comments__button {
   display: inline-block;
-  border-radius: 5px;
-  padding: 10px 13px 10px 13px;
+  border-radius: rem(5px);
+  padding: rem(10px 13px 10px 13px);
   background: #2f3234;
-  border: 1px solid #2f3234; }
+  border: rem(1px) solid #2f3234; }
 
 .comments__more-info {
   color: white;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 13px;
+  font-size: rem(13px);
   font-weight: 500; }
 
 .comments__photo {

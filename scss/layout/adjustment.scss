@@ -1,16 +1,33 @@
+@function rem($px) {
+  @return $px / 16px + 0rem;
+}
+
+$tablets: 768px;
+@mixin tablets {
+  @media screen and (max-width: $tablets) {
+    @content;
+  }
+}
+
+$phones: 480px;
+@mixin phones {
+  @media screen and (max-width: $phones) {
+    @content;
+  }
+}
+html {
+  @include tablets {
+    font-size: 15px;
+  }
+  @include phones {
+    font-size: 13px;
+  }
+}
 html, body {
   height: 100%;
   width: 100%;
   padding: 0;
   margin: 0;
-}
-html {
-  @include tablets {
-    font-size: rem(15px);
-  }
-  @include phones {
-    font-size: rem(13px);
-  }
 }
 body {
   font-family: "Ubuntu", Arial, Helvetica, sans-serif;

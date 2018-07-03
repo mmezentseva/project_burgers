@@ -1,5 +1,17 @@
+$tablets: 768px;
+@mixin tablets {
+  @media screen and (max-width: $tablets) {
+    @content;
+  }
+}
+
+$phones: 480px;
+@mixin phones {
+  @media screen and (max-width: $phones) {
+    @content;
+  }
+}
 .main-nav {
-  display: flex;
   position: fixed;
   top: rem(90px);
   right: rem(100px);

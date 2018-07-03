@@ -1,3 +1,11 @@
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 15px; } }
+
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 13px; } }
+
 html, body {
   height: 100%;
   width: 100%;
@@ -10,7 +18,8 @@ body {
   font-style: light;
   font-size: 18px;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: antialiased; }
+  -moz-osx-font-smoothing: antialiased;
+  overflow-x: hidden; }
 
 * {
   -webkit-box-sizing: border-box;

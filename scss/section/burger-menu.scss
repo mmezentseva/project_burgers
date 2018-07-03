@@ -1,3 +1,15 @@
+$tablets: 768px;
+@mixin tablets {
+  @media screen and (max-width: $tablets) {
+    @content;
+  }
+}
+$phones: 480px;
+@mixin phones {
+  @media screen and (max-width: $phones) {
+    @content;
+  }
+}
 .burgers-menu {
   background: url("../img/bg/burgers-list.jpg") center center no-repeat;	
   position: relative;
@@ -15,10 +27,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include tablets {
+    flex-wrap: wrap;
+  }
 }
 .burgers-menu__right {
   width: 50%;
   display: flex;
+
+  @include tablets {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
 }
 .burgers-menu__right-content {
   width: 80%;
@@ -26,6 +48,14 @@
   justify-content: center;
   margin-left: 8%;
   margin-top: -5%;
+
+  @include tablets {
+    width: 70%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
 }
 .burgers-menu__right-arrow {
   margin: auto;
@@ -36,15 +66,38 @@
   line-height: 1;
   color: white;
   padding-bottom: 8%;
+
+  @include tablets {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    text-align: center;
+    width: 80%;
+  }
 }
 .burgers-menu__text {
   font-size: rem(14px);
   line-height: 1.5;
   color: white;
+
+  @include tablets {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+    margin-top: -5%;
+  }
 }
 .burgers-menu__price {
   display: inline-block;
-  vertical-align: bottom;
+  text-align: bottom;
+
+  @include tablets {
+    text-align: center;
+    margin-left: 17%;
+  }
 }
 .burgers-menu__price-number {
   font-family: "gagalin";
@@ -60,6 +113,11 @@
   display: inline-block;
   vertical-align: bottom;
   padding-left: 4%;
+
+  @include tablets {
+    text-align: center;
+    margin: auto;
+  }
 }
 .burgers-menu__button-order {
   display: inline-block;
@@ -74,10 +132,14 @@
   background: #e45028;
   border: 1px solid #e45028;
   border-radius: rem(5px);
-  padding: rem(13px 17px 13px 17px);
+  padding: rem(13px) rem(17px);
 }
 .burgers-menu__right-arrow {
   margin-right: -7%;
+
+  @include tablets {
+    margin-right: 5%;
+  }
 }
 .burgers-menu__left {
   width: 50%;
@@ -90,14 +152,29 @@
   align-items: flex-start;
   width: 90%;
   margin-right: 5%;
+
+  @include tablets {
+    width: 80%;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
 }
 .burgers-menu__structure {
   margin-left: 8%;
+
+  @include tablets {
+    margin-left: 16%;
+  }
 }
 .burgers-menu__left-arrow {
   margin: auto;
   margin-right: -3%;
   padding-bottom: rem(10px);
+
+  @include tablets {
+    margin-left: -20%;
+  }
 }
 .burgers-menu__calories {
   display: flex;
@@ -105,9 +182,24 @@
   justify-content: center;
   align-items: center;
   margin-left: 6%;
+  
+  @include tablets {
+    margin-left: 6%;
+  }
 }
 .burgers-menu__picture {
   margin-top: 1%;
+
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 45%;
+    margin-bottom: 10%;
+    margin-left: -40%;
+    margin-right: -40%;
+  }
 }
 .burgers-menu__calories-picture {
   display: flex;
@@ -144,7 +236,7 @@
   background: rgba(#e35028, .40);
   border: none;
   border-radius: rem(5px);
-  padding: rem(13px 20px 13px 20px);
+  padding: rem(13px) rem(20px);
 }
 .burgers-menu__ingr {
   margin-top: rem(5px);
