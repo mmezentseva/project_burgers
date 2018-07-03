@@ -164,12 +164,19 @@ $phones: 480px;
     flex-direction: column;
     align-items: center;
     margin: auto;
-    margin-top: -2%; 
+    margin-top: -10%; 
+  }
+  @include phones {
+    margin-top: 0;
   }
 }
 .top-content__image-picture {
   max-width: 100%;
   max-height: 100%;
+
+  @include tablets {
+    max-width: 150%;
+  }
 }
 .top-content__credo {
   flex-basis: 50%;
