@@ -49,8 +49,7 @@ $phones: 480px;
   width: 80%;
   flex-direction: column;
   justify-content: center;
-  margin-left: 8%;
-  margin-top: -5%;
+  margin: auto 8%;
 
   @include tablets {
     width: 70%;
@@ -130,8 +129,8 @@ $phones: 480px;
 }
 .burgers-menu__button {
   display: inline-block;
-  vertical-align: bottom;
   padding-left: 4%;
+  vertical-align: text-bottom;
 
   @include tablets {
     text-align: center;
@@ -159,7 +158,7 @@ $phones: 480px;
   justify-content: center;
   align-items: flex-start;
   width: 50%;
-  margin-right: 5%;
+  height: 100vh;
 
   @include tablets {
     flex-direction: row;
@@ -168,7 +167,10 @@ $phones: 480px;
   }
 }
 .burgers-menu__structure {
-  margin-left: 8%;
+  margin-left: 2%;
+  position: absolute;
+  top: 15%;
+  display: flex;
 
   @include tablets {
     margin-left: 8%;
@@ -176,6 +178,42 @@ $phones: 480px;
   @include phones {
     margin-left: 3%;
   }
+}
+.burgers-menu__window {
+  width: 270px;
+  height: 320px;
+  background-color: rgba(rgb(248, 242, 242), 0.8);
+  border-radius: 2%;
+  flex-direction: column;
+  justify-content: space-between;
+  display: none;
+}
+.burgers-menu__window-list {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+.window-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3% 5% 2% 5%;
+}
+.window-list-item__ingr {
+  font-family: "Ubuntu";
+  font-size: rem(14px);
+  color: black;
+  font-weight: 400;
+  text-transform: capitalize;
+  text-decoration: none;
+  flex-basis: 50%;
+}
+.window-list-item__number {
+  font-family: "Ubuntu";
+  font-size: rem(14px);
+  color: black;
+  font-weight: 400;
+  text-decoration: none;
 }
 .burgers-menu__left-arrow {
   @include tablets {
@@ -190,9 +228,10 @@ $phones: 480px;
 .burgers-menu__calories {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  position: absolute;
   align-items: center;
-  margin-left: 6%;
+  margin-left: 2%;
+  margin-top: 10%;
   
   @include tablets {
     margin-left: 8%;
@@ -202,8 +241,9 @@ $phones: 480px;
   }
 }
 .burgers-menu__picture {
-  margin-top: 1%;
-
+  margin-top: 1% 3%;
+  width: 100%;
+  
   @include tablets {
     display: flex;
     flex-direction: column;
@@ -218,7 +258,10 @@ $phones: 480px;
   }
 }
 .burgers-menu__picture-image {
-  max-width: 170%;
+  width: 100%;
+  max-width: 400px;
+  margin: 3% 15%;
+  transition: all ease 1s;
 }
 .burgers-menu__calories-picture {
   display: flex;
@@ -260,3 +303,4 @@ $phones: 480px;
 .burgers-menu__ingr {
   margin-top: rem(5px);
 }
+

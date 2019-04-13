@@ -45,7 +45,7 @@ $phones: 480px;
   font-size: rem(72px);
   color: #f9b43b;
   margin-bottom: 7%;
-  margin-top: -30%;
+  margin-top: -25%;
   margin-left: 7%;
   display: flex;
   align-self: self-start;
@@ -107,7 +107,6 @@ $phones: 480px;
   color: white;
   margin-left: rem(20px);
   width: 70%;
-  margin-top: 4%;
 
   @include tablets {
     text-align: center;
@@ -141,6 +140,7 @@ $phones: 480px;
   display: flex;
   height: 0;
   overflow: hidden;
+  margin-top: 2%;
 
   @include tablets {
     flex-direction: column;

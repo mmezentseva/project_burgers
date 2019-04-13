@@ -50,3 +50,8 @@ ul {
   padding: 0px;
   margin: 0px;
 }
+button, 
+button:active, 
+button:focus {
+    outline: none;
+}

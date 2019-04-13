@@ -1,0 +1,20 @@
+// resolutions
+$tablets: 768px;
+$phones: 480px;
+
+// base
+@import "layout/media.scss";
+@import "layout/adjustment.scss";
+@import "layout/fonts.scss";
+@import "layout/base.scss";
+
+// section
+@import "section/top-content.scss";
+@import "section/best.scss";
+@import "section/team.scss";
+@import "section/comments.scss";
+@import "section/main-nav.scss";
+@import "section/burger-menu.scss";
+@import "section/menu-bar.scss";
+@import "section/order.scss";
+@import "section/contacts.scss";
