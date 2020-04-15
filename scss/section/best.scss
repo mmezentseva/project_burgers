@@ -7,102 +7,105 @@
   justify-content: center;
   background-size: cover;
 }
+
 .best__list {
-  width: 95%; 
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
   margin-top: 10%;
 
-  @include tablets {
-    width: 90%; 
+  @media (max-width: 970px) {
+    padding-left: 30px;
   }
-  @include phones {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: -5%;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
   }
 }
+
 .best__type {
-  flex-basis: calc(100% / 3);
+  display: flex;
+  flex-basis: calc(100% / 3 - 15px);
   flex-direction: column;
   justify-content: center;
-  list-style: none;
-
-  @include phones {
+  
+  @media (max-width: 600px) {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: -20%;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+
+  &:first-child .best__image {
+    margin-bottom: rem(35px);
+
+    @media (max-width: 530px) {
+      margin-right: -10px;
     }
+  }
 }
+
 .best__title {
   font-family: "gagalin";
   color: #2f3234;
   font-size: rem(72px);
   text-align: center;
   margin-top: -11%;
-
-  @include phones {
-    width: 90%;
-    margin-top: -18%;
-  }
 }
+
 .best__description {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-self: center;
+  text-align: center;
 
-  @include phones {
-    margin-left: 5%;
-    width: 75%;
+  @media (max-width: 600px) {
+    display: flex;
+    text-align: start;
+    margin-left: 20px;
+    flex-basis: 75%;
   }
 }
+
 .best__main {
   font-family: "lifehack";
   color: #2f3234;
-  font-size: rem(24px);
+  font-size: 24px;
   align-self: center;
-  width: 90%;
+  width: 100%;
   text-align: center;
 
-  @include phones {
-    align-self: start;
-    white-space: nowrap;
-    text-align: left;
+  @media (max-width: 600px) {
+    display: flex;
+    text-align: start;
   }
 }
+
 .best__image {
   text-align: center;
   margin-bottom: rem(40px);
   min-height: rem(85px);
 
-  @include phones {
-    margin-bottom: 0;
-    width: 25%;
+  @media (max-width: 600px) {
+    margin: 0 auto;
+  }
+
+  @media (max-width: 530px) {
+    width: 35%;
+    margin-right: 10px;
   }
 }
-.best__image-picture {
-  @include phones {
-    width: 90%;
-    height: rem(100px);
-  }
-}
+
 .best__article {
   font-family: "Ubuntu";
   font-weight: 300;
   color: #2f3234;
-  font-size: rem(14px);
-  line-height: rem(20px);
+  font-size: 14px;
+  line-height: 20px;
   margin-top: rem(16px);
-  padding-right: rem(10px);
-  text-align: center;
 
-  @include phones {
-    text-align: left;
+  @media (max-width: 600px) {
+    margin-left: 5px;
   }
 }

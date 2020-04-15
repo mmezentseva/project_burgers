@@ -15,6 +15,7 @@ $phones: 480px;
     @content;
   }
 }
+
 html {
   @include tablets {
     font-size: 15px;
@@ -23,12 +24,14 @@ html {
     font-size: 13px;
   }
 }
+
 html, body {
   height: 100%;
   width: 100%;
   padding: 0;
   margin: 0;
 }
+
 body {
   font-family: "Ubuntu", Arial, Helvetica, sans-serif;
   font-weight: 300;
@@ -38,18 +41,26 @@ body {
   -moz-osx-font-smoothing: antialiased;
   overflow-x: hidden;
 }
+
 * {
   box-sizing: border-box;
 }
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   margin: 0px;
 }
+
 ul {
   list-style: none;
   padding: 0px;
   margin: 0px;
 }
+
+a {
+  text-decoration: none;
+}
+
 button, 
 button:active, 
 button:focus {

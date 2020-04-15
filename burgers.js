@@ -1,87 +1,63 @@
-// модальное окно .сomments
-
-/* var modal = document.querySelector(".modal");
-var btn = document.querySelector(".comments__button");
-var close = document.getElementsByClassName("close")[0];
-
-btn.addEventListener("click", function(e) {
-    e.preventDefault();
-});
-
-btn.onclick=function() {
-    modal.style.display="block";
-}
-
-close.onclick=function() {
-    modal.style.display="none";
-}
-
-window.onclick=function(event) {
-    if (event.target==modal) {
-      modal.style.display="none";
-    }
-} */
-
 // модальное окно .сomments 
 
-var btn = document.querySelectorAll(".comments__button");
-var close = document.querySelectorAll(".close");
+var btn = document.querySelectorAll('.comments__button');
+var close = document.querySelectorAll('.close');
 
-btn.forEach (function() {
-    addEventListener("click", function(e) {
-    e.preventDefault();
+btn.forEach (function () {
+    addEventListener("click", function(evt) {
+    evt.preventDefault();
     });
 })
 
-btn.forEach (function(item) {
-    item.addEventListener ('click', function() {
+btn.forEach (function (item) {
+    item.addEventListener ('click', function () {
         var modalName = item.getAttribute('data-popup');
-        document.getElementById(modalName).style.display="block";
+        document.getElementById(modalName).style.display = 'block';
     })
 })
 
 close.forEach (function(item) {
-    item.addEventListener('click', function() {
+    item.addEventListener('click', function () {
         var closeName = item.closest('.modal');
-        closeName.style.display = "none";
+        closeName.style.display = 'none';
     })
 })
 
-window.onclick=function(e) {
-    if (e.target.classList.contains('modal')) {
-      e.target.style.display="none";
+document.onclick = function(evt) {
+    if (evt.target.classList.contains('modal')) {
+      evt.target.style.display = 'none';
     }
 }
 
 // модальное окно .burger-menu
 
-var menu = document.querySelector(".burgers-menu__window");
-var ingr = document.querySelector(".burgers-menu__cover");
+var menu = document.querySelector('.burgers-menu__window');
+var ingr = document.querySelector('.burgers-menu__cover');
 
-ingr.addEventListener("click", function(e) {
-    e.preventDefault();
+ingr.addEventListener("click", function (evt) {
+    evt.preventDefault();
 })
 
-ingr.onclick=function() {
-    menu.style.display="block";
+ingr.onclick = function () {
+    menu.style.display = 'block';
 }
 
-menu.onmouseleave=function() {
-    this.style.display="none";
+menu.onmouseleave = function () {
+    this.style.display = 'none';
 }
 
 
 // accordion
 
-var title = document.getElementsByClassName ("acco__item");
+var title = document.getElementsByClassName ('acco__item');
 
-for (var i=0; i < title.length; i++) {   
-    title[i].addEventListener('click', function(el) {
+for (var i = 0; i < title.length; i++) {   
+    title[i].addEventListener('click', function (el) {
         el.preventDefault();
 });
-    title[i].addEventListener('click', function() {
+    title[i].addEventListener('click', function () {
         if (!(this.classList.contains('acco__item--active'))) {
-            for (var i=0; i < title.length; i++) {
+            for (var i = 0; i < title.length; i++) {
                 title[i].classList.remove('acco__item--active');
             }
             this.classList.add('acco__item--active');
@@ -91,15 +67,15 @@ for (var i=0; i < title.length; i++) {
 
 // slider
 
-var left = document.querySelector ("#slider-left");
-var right = document.querySelector ("#slider-right");
-var slideImage = document.querySelector ("#slideImage");
+var left = document.querySelector('#slider-left');
+var right = document.querySelector('#slider-right');
+var slideImage = document.querySelector('#slideImage');
 
-right.addEventListener("click", function(e) {
-    e.preventDefault();
+right.addEventListener("click", function (evt) {
+    evt.preventDefault();
 });
-left.addEventListener("click", function(e) {
-    e.preventDefault();
+left.addEventListener("click", function(evt) {
+    evt.preventDefault();
 });
 
 var imagesUrls = ['./img/content/burger.png','./img/content/cheeseburger.png','./img/content/chikenburger.png',
@@ -109,7 +85,7 @@ var currentImageIndex = 0;
 
 slideImage.src = imagesUrls[currentImageIndex];
 
-left.onclick = function() {
+left.onclick = function () {
     if (currentImageIndex-1 == -1) {
         currentImageIndex = imagesUrls.length - 1;
     } else {

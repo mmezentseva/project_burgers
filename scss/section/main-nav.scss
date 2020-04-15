@@ -14,21 +14,28 @@ $phones: 480px;
 .main-nav {
   position: fixed;
   top: rem(90px);
-  right: rem(100px);
+  right: 7%;
+
+  @media (max-width: 1300px) {
+    right: 30px;
+  }
 
   @include tablets {
     display: none;
   }
 }
+
 .main-nav__list {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
 .main-nav__item {
   padding-bottom: 5%;
   align-self: center;
 }
+
 .main-nav__link {
   display: inline-block;
   width: rem(6px);
@@ -37,6 +44,7 @@ $phones: 480px;
   background: white;
   text-decoration: none;
 }
+
 .main-nav__item--active {
   display: inline-block;
   position: relative;

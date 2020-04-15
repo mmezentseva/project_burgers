@@ -36,30 +36,35 @@ $phones: 480px;
   }
 }
 .menu-accordion {
-  position: absolute;
-  right: 0;
   width: 90%; 
   height: 100vh;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   flex-direction: column;
+
+  &__list {
+    position: absolute;
+    right: 0;
+    width: 90%;
+    height: 100%;  
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+  }
+
+  &__photo {
+    width: 100%; 
+    height: 100%;
+    display: flex;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    flex: 1 0 80px;
+  }
 }
-.menu-accordion__list {   
-  display: flex;
-  justify-content: flex-end;
-  padding: 0;
-}
-.menu-accordion__photo {
-  width: 100%; 
-  height: 100%;
-  display: flex;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  position: relative;
-  flex: 1 0 80px;
-}
+
 .menu-accordion__drop {
   display: flex;
   background: rgba(#2f3234, .70);
