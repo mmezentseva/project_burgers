@@ -120,7 +120,7 @@ $phones: 480px;
 
   @include tablets {
   display: flex;
-  width: 40%;
+  width: 45%;
   justify-content: center;
   margin: auto;
   }
@@ -147,7 +147,7 @@ $phones: 480px;
     background: #2f3234;
     border: rem(1px) solid #2f3234;
     justify-content: center;
-    width: 70%;
+    width: 100%;
     margin: auto;
     margin-top: 7%;
 
@@ -157,6 +157,8 @@ $phones: 480px;
       text-decoration: none;
       font-size: rem(13px);
       font-weight: 700;
+      padding: 10px 0px;
+      letter-spacing: 1.2px;
     }
   }
 }

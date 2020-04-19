@@ -31,7 +31,7 @@ $phones: 480px;
   align-self: self-start;
 
   @include phones {
-    left: 5%;
+    left: 10%;
     top: 10%;
   }
 }
@@ -128,11 +128,12 @@ $phones: 480px;
 }
 .menu-accordion__text {
   font-style: "Ubuntu";
-  font-size: rem(14px);
+  font-size: 14px;
   color: white;
 
   @include tablets {
-    margin-bottom: 30%;
+    height: 100%;
+    overflow: hidden;
   }
 }
 

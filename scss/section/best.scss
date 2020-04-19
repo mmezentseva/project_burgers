@@ -20,6 +20,7 @@
 
   @media (max-width: 600px) {
     flex-direction: column;
+    margin-right: 10px;
   }
 }
 
@@ -51,6 +52,10 @@
   font-size: rem(72px);
   text-align: center;
   margin-top: -11%;
+
+  @media (max-width: 400px) {
+    margin-top: 0;
+  }
 }
 
 .best__description {
@@ -63,7 +68,7 @@
   @media (max-width: 600px) {
     display: flex;
     text-align: start;
-    margin-left: 20px;
+    margin: 0 20px 0 20px;
     flex-basis: 75%;
   }
 }

@@ -4,12 +4,14 @@ $tablets: 768px;
     @content;
   }
 }
+
 $phones: 480px;
 @mixin phones {
   @media screen and (max-width: $phones) {
     @content;
   }
 }
+
 .burgers-menu {
   background: url("../img/bg/burgers-list.jpg") center center no-repeat;	
   position: relative;
@@ -19,7 +21,46 @@ $phones: 480px;
   height: 100vh;
   display: flex;
   justify-content: center;
+
+  &__left-arrow {
+    margin: auto;
+
+    @media (max-width: 1050px) {
+      margin-left: 40px;
+    }
+
+    @media (max-width: 800px) {
+      position: absolute;
+      top: 40%;
+      left: 1%;
+    }
+
+    @media (max-width: 450px) {
+      position: absolute;
+      top: 40%;
+      left: 0;
+    }
+  }
+
+  &__right-arrow {
+    margin: auto;
+
+    @media (max-width: 1050px) {
+      margin-right: 40px;
+    }
+
+    @media (max-width: 800px) {
+      position: absolute;
+      top: 40%;
+      right: 0;
+    }
+
+    @media (max-width: 450px) {
+      right: 3px;
+    }
+  }
 }
+
 .burger__container {
   margin: 0 auto;
   width: rem(1000px); 
@@ -28,52 +69,33 @@ $phones: 480px;
   justify-content: center;
   align-items: center;
 
-  @include tablets {
+  @media (max-width: 800px) {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
   }
 }
+
 .burgers-menu__right {
   width: 50%;
-  display: flex;
-
-  @include tablets {
-    width: 100%;
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
-}
-.burgers-menu__right-content {
-  width: 80%;
   flex-direction: column;
   justify-content: center;
   margin: auto 8%;
-  padding-top: 43px;
 
-  @include tablets {
+  @media (max-width: 800px) {
     width: 70%;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin: auto;
+    text-align: center;
+    margin-bottom: 150px;
   }
-  @include phones {
-    width: 60%;
-  }
-}
-.burgers-menu__right-arrow {
-  margin: auto;
 
-  @include tablets {
-    position: absolute;
-    margin-left: 40%;
-  }
-  @include phones {
-    margin-left: 43%;
+  @media (max-width: 480px) {
+    margin-bottom: 200px;
   }
 }
+
 .burgers-menu__title {
   font-family: "gagalin";
   font-size: rem(72px);
@@ -85,15 +107,19 @@ $phones: 480px;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    margin: auto;
-    width: 100%;
+    margin-bottom: 15px;
   }
-  @include phones {
-    width: 100%;
+
+  @media (max-width: 450px) {
+    font-size: 50px;
+    margin-top: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
   }
 }
+
 .burgers-menu__text {
-  font-size: rem(14px);
+  font-size: 14px;
   line-height: 1.5;
   color: white;
 
@@ -103,32 +129,31 @@ $phones: 480px;
     align-items: center;
     margin: auto;
     text-align: center;
-    margin-top: -5%;
   }
 }
+
 .burgers-menu__price {
   display: inline-block;
   text-align: bottom;
-  padding-top: 32px;
 
   @include tablets {
     text-align: center;
     margin-left: 17%;
   }
-  @include phones {
-    margin-left: 0;
-  }
 }
+
 .burgers-menu__price-number {
   font-family: "gagalin";
   font-size: rem(72px);
   color: #e35028;
 }
+
 .burgers-menu__price-rub {
   font-family: "gagalin";
   font-size: rem(30px);
   color: #e35028;
 }
+
 .burgers-menu__button {
   display: inline-block;
   padding-left: 4%;
@@ -139,6 +164,7 @@ $phones: 480px;
     margin: auto;
   }
 }
+
 .burgers-menu__button-order {
   display: inline-block;
   font-family: "Ubuntu";
@@ -154,7 +180,8 @@ $phones: 480px;
   border-radius: rem(5px);
   padding: rem(13px) rem(17px);
 }
-.burgers-menu__left-content {
+
+.burgers-menu__left {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -162,25 +189,35 @@ $phones: 480px;
   width: 50%;
   height: 100vh;
 
-  @include tablets {
+  @media (max-width: 800px) {
     flex-direction: row;
     justify-content: center;
-    flex-wrap: nowrap;
+    align-items: center;
+    flex-basis: 50%;
+    width: 100%;
+  }
+
+  @media (max-width: 500px) {
+    width: 70%;
   }
 }
+
 .burgers-menu__structure {
   margin-left: 2%;
   position: absolute;
   top: 15%;
   display: flex;
 
-  @include tablets {
-    margin-left: 8%;
+  @media (max-width: 800px) {
+    left: 10%;
+    top: 10%;
   }
-  @include phones {
-    margin-left: 3%;
+
+  @media (max-width: 600px) {
+    top: 7%;
   }
 }
+
 .burgers-menu__window {
   width: 270px;
   height: 320px;
@@ -190,17 +227,20 @@ $phones: 480px;
   justify-content: space-between;
   display: none;
 }
+
 .burgers-menu__window-list {
   display: flex;
   position: relative;
   flex-direction: column;
 }
+
 .window-list-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 3% 5% 2% 5%;
 }
+
 .window-list-item__ingr {
   font-family: "Ubuntu";
   font-size: rem(14px);
@@ -210,6 +250,7 @@ $phones: 480px;
   text-decoration: none;
   flex-basis: 50%;
 }
+
 .window-list-item__number {
   font-family: "Ubuntu";
   font-size: rem(14px);
@@ -217,54 +258,61 @@ $phones: 480px;
   font-weight: 400;
   text-decoration: none;
 }
-.burgers-menu__left-arrow {
-  @include tablets {
-    align-self: start;
-    position: absolute;
-    margin-left: 7%;
-  }
-  @include phones {
-    margin-left: 3%;
-  }
-}
+
 .burgers-menu__calories {
   display: flex;
   flex-direction: column;
   position: absolute;
   align-items: center;
   margin-left: 2%;
-  margin-top: 12%;
+  margin-top: 170px;
   
-  @include tablets {
-    margin-left: 8%;
+  @media (max-width: 800px) {
+    right: 10%;
+    top: -7%;
   }
-  @include phones {
-    margin-left: 3%;
+
+  @media (max-width: 600px) {
+    top: -10%;
   }
 }
+
 .burgers-menu__picture {
   margin-bottom: 70px;
   width: 100%;
+  margin-left: 5%;
   
-  @include tablets {
+  @media (max-width: 800px){
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 20%;
-    min-width: 100%;
+    margin-top: 170px;
+    margin-bottom: 10px;
   }
-  @include phones {
-    margin-left: 10%;
-    margin-right: 10%;
+
+  @media (max-width: 480px) {
+    margin-top: 230px;
+    margin-bottom: 0;
   }
 }
+
 .burgers-menu__picture-image {
   width: 100%;
   max-width: 400px;
-  margin: 3% 15%;
+  margin: 3% 5%;
   transition: all ease 1s;
+
+  @media (max-width: 1000px) {
+    max-width: 370px;
+    margin: 3% 5%;
+  }
+
+  @media (max-width: 600px) {
+    max-width: 370px;
+  }
 }
+
 .burgers-menu__calories-picture {
   display: flex;
   flex-direction: column;
@@ -274,6 +322,7 @@ $phones: 480px;
   width: rem(70px);
   height: rem(70px);
 }
+
 .burgers-menu__number {
   font-family: "gagalin";
   font-size: rem(20px);
@@ -281,12 +330,14 @@ $phones: 480px;
   color: white;
   padding: 30% 0 0 3%;
 }
+
 .burgers-menu__kkal {
   font-family: "gagalin";
   font-size: rem(14px);
   font-weight: 400;
   color: white;
 }
+
 .burgers-menu__link {
   font-family: "gagalin";
   font-size: rem(14px);
@@ -302,6 +353,7 @@ $phones: 480px;
   border-radius: rem(5px);
   padding: rem(13px) rem(20px);
 }
+
 .burgers-menu__ingr {
   margin-top: rem(5px);
 }

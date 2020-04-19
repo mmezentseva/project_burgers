@@ -6,92 +6,139 @@
   justify-content: center;
   background-size: cover;
   color: white;
-}
-.order__maincontent {
-  display: flex;
-  justify-content: center;
 
-  @include tablets {
-    flex-direction: column;
+  &__maincontent {
+    display: flex;
+    justify-content: center;
+
+    @include tablets {
+      flex-direction: column;
+      align-items: center;
+      margin-left: 0;
+    }
+  }
+
+  &__title {
+    font-family: "gagalin";
+    color: #f9b43b;
+    font-size: rem(72px);
+    text-align: center;
+    margin-bottom: 8%;
+    margin-top: -8%;
+  
+    @include tablets {
+      margin-top: 5%;
+      margin-bottom: 7%;
+      width: 90%;
+      font-size: 50px;
+    }
+  }
+
+  &__clear {
+    text-decoration: none;
+    color: white;
+    margin-left: 4%;
+    margin-top: 3%;
+    display: flex;
+    font-size: 14px;
     align-items: center;
-    margin-left: 0;
   }
 }
-.order__title {
-  font-family: "gagalin";
-  color: #f9b43b;
-  font-size: rem(72px);
-  text-align: center;
-  margin-bottom: 8%;
-  margin-top: -8%;
 
-  @include tablets {
-    margin-top: 5%;
-    margin-bottom: 7%;
-    width: 90%;
-  }
-}
 .form__left {
   display: flex;
   width: 50%;
   text-align: left;
 
+  @media (max-width: 1000px) {
+    margin-left: 20px;
+  }
+
+  @include tablets {
+    margin-left: 0;
+    width: 70%;
+  }
+
   @include phones {
-    width: 90%;
-    margin-top: -5%;
+    width: 93%;
+    margin-left: 16px;
 
     .form__block:last-child {
       display: none;
     }
   }
 }
+
 .form__title {
-  margin-bottom: rem(5px);
-  font-size: rem(14px);
+  margin-bottom: 5px;
+  font-size: 14px;
 }
+
 .form__radio-title {
-  font-size: rem(14px);
+  font-size: 14px;
 }
+
 .form__checkbox-title {
-  font-size: rem(14px);
+  font-size: 14px;
 }
+
 .form__input {
   border: none;
   border-radius: rem(5px);
   padding: rem(5px) rem(20px);
   width: 100%;
-  outline: none;
 }
+
 .form__row {
   display: flex;
-  margin-bottom: rem(10px);
+  margin-bottom: 10px;
 
-  @include phones {
+  /* @include phones {
     align-items: center;
     justify-content: center;
+  } */
+
+  &--radio {
+    @include phones {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 15px;
+    }
   }
 }
+
 .form__block {
   flex: 1;
   margin-right: rem(20px);
   margin-bottom: 2%;
+
   &:last-child {
     margin-right: 0;
   }
 }
+
 .form__right {
   width: 50%;
   margin-left: rem(20px);
 
-  @include tablets {
-    margin-top: -2%;
-    margin-left: 0;
+  @media (max-width: 1000px) {
+    margin-right: 20px;
   }
+
+  @include tablets {
+    width: 70%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   @include phones {
     width: 90%;
     margin-bottom: -1%;
+    margin-right: 0;
   }
 }
+
 .form___order-button {
   display: flex;
   font-family: "Ubuntu";
@@ -109,15 +156,7 @@
   flex-basis: 10%;
   margin-top: 12%;
 }
-.order__clear {
-  text-decoration: none;
-  color: white;
-  margin-left: 4%;
-  margin-top: 3%;
-  display: flex;
-  font-size: rem(14px);
-  align-items: center;
-}
+
 .form__comments {
   background: white;
 	border: none;
@@ -126,20 +165,18 @@
   overflow: auto;
   outline: none;
   padding: 2% 2%;
-
-  @include tablets {
-    width: 100%;
-  }
-  @include phones {
-    width: 96%;
-  }
+  width: 100%;
 }
+
 .form__radio {
   margin-right: rem(22px);
+  margin-bottom: 10px;
+
+  &-input {
+    display: none;
+  }
 }
-.form__radio-input {
-  display: none;
-}
+
 .form__input-demo {
 	width: rem(15px);
 	height: rem(15px);
@@ -148,11 +185,13 @@
   position: relative;
   margin-right: rem(5px);
 }
+
 .form__input-demo, .form__radio-title {
 	display: inline-block;
   vertical-align: middle;
   cursor: pointer;
 }
+
 .form__radio-input:checked + .form__input-demo:before {
 	content: "";
 	display: block;
@@ -164,23 +203,28 @@
 	background: #e35028;
 	border-radius: 50%;
 }
+
 .form__checkbox {
   margin-top: 2%;
+
+  &-input {
+    display: none;
+  }
+
+  &-demo {
+    position: relative;    
+	  width: rem(15px);             
+	  height: rem(15px);            
+    background: white;
+    margin-right: rem(5px);
+  }
 }
-.form__checkbox-input {
-  display: none;
-}
-.form__checkbox-demo {
-  position: relative;    
-	width: rem(15px);             
-	height: rem(15px);            
-  background: white;
-  margin-right: rem(5px);
-}
+
 .form__checkbox-demo, .form__checkbox-title {
   display: inline-block;
 	vertical-align: middle;
 }
+
 .form__checkbox-input:checked + .form__checkbox-demo:before {
   content: "";   
 	display: block;			
