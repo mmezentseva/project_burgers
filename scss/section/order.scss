@@ -93,11 +93,6 @@
   display: flex;
   margin-bottom: 10px;
 
-  /* @include phones {
-    align-items: center;
-    justify-content: center;
-  } */
-
   &--radio {
     @include phones {
       display: flex;
@@ -193,13 +188,13 @@
 }
 
 .form__radio-input:checked + .form__input-demo:before {
-	content: "";
+	content: '';
 	display: block;
 	position: absolute;
-	top: rem(4px);
-	right: rem(4px);
-	bottom: rem(4px);
-	left: rem(4px);
+	top: rem(3px);
+	right: rem(3px);
+	bottom: rem(3px);
+	left: rem(3px);
 	background: #e35028;
 	border-radius: 50%;
 }

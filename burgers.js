@@ -3,40 +3,25 @@
 var btn = document.querySelectorAll('.comments__button');
 var close = document.querySelectorAll('.close');
 
-btn.forEach (function () {
-    addEventListener("click", function(evt) {
-    evt.preventDefault();
-    });
-})
-
 btn.forEach (function (item) {
-    item.addEventListener ('click', function () {
+    item.addEventListener ('click', function (evt) {
+        evt.preventDefault();
         var modalName = item.getAttribute('data-popup');
         document.getElementById(modalName).style.display = 'block';
     })
 })
 
-close.forEach (function(item) {
+close.forEach (function (item) {
     item.addEventListener('click', function () {
         var closeName = item.closest('.modal');
         closeName.style.display = 'none';
     })
 })
 
-document.onclick = function(evt) {
-    if (evt.target.classList.contains('modal')) {
-      evt.target.style.display = 'none';
-    }
-}
-
 // модальное окно .burger-menu
 
 var menu = document.querySelector('.burgers-menu__window');
 var ingr = document.querySelector('.burgers-menu__cover');
-
-ingr.addEventListener("click", function (evt) {
-    evt.preventDefault();
-})
 
 ingr.onclick = function () {
     menu.style.display = 'block';
@@ -102,6 +87,54 @@ right.onclick = function() {
     }
     slideImage.src = imagesUrls[currentImageIndex];
 }; 
+
+// Прокрутка вниз
+
+var downButton = document.querySelector('.next');
+var maxHeight = document.documentElement.scrollHeight;
+    
+var scrollDown = function () {
+    downButton.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        window.scrollTo(0, maxHeight);
+    })
+}
+scrollDown();
+
+// форма
+
+var form = document.querySelectorAll('.form__element');
+var formClear = document.querySelector('.order__clear');
+
+formClear.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    form.forEach(function (item) {
+        item.reset();
+    })
+})
+
+
+/* var t;
+function up() {
+    var top = Math.max(document.body.scrollTop, document.documentElement.scrollTop); // size
+    if(top > 0) {
+        window.scrollBy(0,-80);
+        t = setTimeout('up()',15);
+    } else {
+        clearTimeout(t);
+        return false;
+    }
+} */
+/* function scrollToBot() {
+    if (scrolledBot < maxHeight) {
+        window.scrollTo(0, scrolledBot);
+        timerBot = setTimeout(scrollToBot, 10); 
+    }
+    else {
+        clearTimeout(timerBot);
+        window.scrollTo(0, maxHeight);
+    }
+} */
 
 // подключение карты
 
